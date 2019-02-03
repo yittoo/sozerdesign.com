@@ -1,14 +1,21 @@
 {
-  "name": "yitwebtestproject",
+  "name": "sozerdesign.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "yit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yittoo/sozerdesign.com.git"
+  },
+  "author": "YigitSozer",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yittoo/sozerdesign.com/issues"
+  },
+  "homepage": "https://github.com/yittoo/sozerdesign.com#readme",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4"
