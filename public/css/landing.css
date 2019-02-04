@@ -40,18 +40,19 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(../image/background.jpg); 
+  background-image: url(https://images.unsplash.com/photo-1549043230-812b845237c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);
+  /* background-image: url(../image/background.jpg);  */
 }
 .slideshow li:nth-child(2) { 
   background-image: url(../image/background2.jpg); 
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(../image/background3.jpg); 
+  background-image: url(../image/background6.jpg); 
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(../image/background4.jpg); 
+  background-image: url(../image/background3.jpg); 
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
@@ -79,4 +80,14 @@ body {
 /* Older browser support - .no-cssanimations class added by modernizr */
 .no-cssanimations .slideshow li {
 	opacity: 1;
+}
+
+#hideAll {
+  position: fixed;
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+  background-color: black;
+  z-index: 99;
 }

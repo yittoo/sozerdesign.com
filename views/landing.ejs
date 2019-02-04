@@ -8,7 +8,8 @@
     </head>
     <body>
 
-    
+    <div class="hideAll" style="display: none"></div>
+
     <div id="landing-header">
  		<h1>Welcome to SozerDesign</h1>
         <h4>Website is under production</h4>
@@ -23,5 +24,12 @@
       <li></li>
       <li></li>
     </ul>
+
+    <script type="text/javascript">
+        document.getElementById("hideAll").style.display = "block";
+        window.onload = function() { 
+            document.getElementById("hideAll").style.display = "none"; 
+        }
+    </script>
 
 <% include partials/footer %>
