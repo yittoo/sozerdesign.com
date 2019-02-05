@@ -1,13 +1,16 @@
+
+var currentIndex = -1;
+
 inIt();
 
-var mainToSection = {
-    toAbout: {id: "#about-section", index: 0},
-    toSkills: {id: "#skills-section", index: 1},
-    toEducation: {id: "#education-section", index: 2},
-    toPersonal: {id: "#personal-section", index: 3},
-    toPortfolio: {id: "#portfolio-section", index: 4},
-    toContact: {id: "#contact-section", index: 5},
-}
+var mainToArray = [
+    {name: "toAbout", id: "#about-section"},
+    {name: "toSkills", id: "#skills-section"},
+    {name: "toEducation", id: "#education-section"},
+    {name: "toPersonal", id: "#personal-section"},
+    {name: "toPortfolio", id: "#portfolio-section"},
+    {name: "toContact", id: "#contact-section"},
+]
 
 $(".btn-home").on("click", function(){
     $("#index-parent").children().fadeOut(500);
@@ -21,24 +24,67 @@ $(".btn-home").on("click", function(){
 });
 
 $(".main-btn-group").on("click", function(){
-    var hitSection = mainToSection[this.id];
+    var hitSection = this.id;
+    mainToArray.forEach(function(pair, index){
+        if(pair.name===hitSection){
+            hitSection = pair.id;
+            currentIndex = index;
+        }
+    });
     $("#index-main-section").addClass("slide-rotate-hor-top");
     $("#index-main-section").fadeOut(500, function(){
         $("#index-main-section").removeClass("slide-rotate-hor-top");
-        botToMid($("#navbar"));
-        botToMid($(hitSection.id));
-        currentIndex = hitSection.index;
+        displaySection($("#navbar"));
+        displaySection($(hitSection));
+        toast();
     });
 });
 
-function botToMid(ele){
+$("body").keydown(function(key){
+    if(key.which === 37 && currentIndex > 0){
+        $(mainToArray[currentIndex].id).addClass("slide-rotate-ver-right");
+        $(mainToArray[currentIndex].id).fadeOut(500, function(){
+            $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-right");
+            $(mainToArray[currentIndex-1].id).addClass("slide-rotate-ver-left-reverse");
+            displaySection($(mainToArray[currentIndex-1].id));
+            currentIndex--;
+            setTimeout(function(){
+                $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-left-reverse");
+            }, 500);
+        });
+    };
+    if(key.which === 39){
+        if(currentIndex<5){
+            $(mainToArray[currentIndex].id).addClass("slide-rotate-ver-left");
+            $(mainToArray[currentIndex].id).fadeOut(500, function(){
+                $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-left");
+                $(mainToArray[currentIndex+1].id).addClass("slide-rotate-ver-right-reverse");
+                displaySection($(mainToArray[currentIndex+1].id));
+                currentIndex++;
+                setTimeout(function(){
+                    $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-right-reverse");
+                }, 500);
+            });
+        }
+    }
+});
+
+function displaySection(ele){
     ele.removeClass("d-none");
     ele.css("display", "none");
     ele.fadeIn(500);
+};
+
+function toast(){
+    $(".toast").fadeTo(700, 1);
+    setTimeout(function(){
+        $(".toast").fadeTo(300, 0);
+    }, 4000);
 }
+
 
 function inIt(){
     $("#index-main-section").css("display", "none");
+    // $(".toast").css("display", "none");
     $("#index-main-section").fadeIn(700);
-    var currentIndex = -1;
 };
