@@ -82,6 +82,10 @@ body{
     font-size: 0.9rem;
 }
 
+.navbar-light .navbar-nav .nav-link.active {
+    font-weight: 700;
+}
+
 .slide-rotate-hor-top {
 	-webkit-animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -244,6 +248,17 @@ body{
     text-shadow: rgb(117, 171, 185) 2px 2px 2px;
 }
 
+@media screen and (max-width : 768px){
+    #general-text  {
+      font-size: 0.8rem;
+    }
+}
+@media screen and (max-width : 992px){
+    #general-text  {
+      font-size: 1.2rem;
+    }
+}
+
 
 #about-section {
     z-index: 0;
@@ -254,15 +269,8 @@ body{
     padding-top: 5rem;
 }
 
-@media screen and (max-width : 768px){
-  #general-text  {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-width : 992px){
-  #general-text  {
-    font-size: 1.2rem;
-  }
+#nav-home-btn{
+    padding-bottom: 5px;
 }
 
 

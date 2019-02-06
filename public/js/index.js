@@ -12,6 +12,15 @@ var mainToArray = [
     {name: "toContact", id: "#contact-section"},
 ]
 
+var navToArray = [
+    {name: "toAboutNav", id: "#about-section"},
+    {name: "toSkillsNav", id: "#skills-section"},
+    {name: "toEducationNav", id: "#education-section"},
+    {name: "toPersonalNav", id: "#personal-section"},
+    {name: "toPortfolioNav", id: "#portfolio-section"},
+    {name: "toContactNav", id: "#contact-section"},
+]
+
 $(".btn-home").on("click", function(){
     $("#index-parent").children().fadeOut(500);
     $("#navbar").fadeOut(500, function(){
@@ -26,8 +35,10 @@ $(".btn-home").on("click", function(){
 $(".main-btn-group").on("click", function(){
     var hitSection = this.id;
     mainToArray.forEach(function(pair, index){
+        $("#"+navToArray[index].name).removeClass("active");
         if(pair.name===hitSection){
             hitSection = pair.id;
+            $("#"+navToArray[index].name).addClass("active");
             currentIndex = index;
         }
     });
@@ -40,12 +51,29 @@ $(".main-btn-group").on("click", function(){
     });
 });
 
+$(".nav-btn-group").on("click", function(){
+    var hitSection = this.id;
+    navToArray.forEach(function(pair, index){
+        $("#"+navToArray[index].name).removeClass("active");
+        if(pair.name===hitSection){
+            $(navToArray[currentIndex].id).fadeOut(500, function(){
+                hitSection = pair.id;
+                currentIndex = index;
+                displaySection($(hitSection));
+                $("#"+navToArray[currentIndex].name).addClass("active");
+            });
+        }
+    });
+});
+
 $("body").keydown(function(key){
     if(key.which === 37 && currentIndex > 0){
         $(mainToArray[currentIndex].id).addClass("slide-rotate-ver-right");
         $(mainToArray[currentIndex].id).fadeOut(500, function(){
             $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-right");
             $(mainToArray[currentIndex-1].id).addClass("slide-rotate-ver-left-reverse");
+            $("#"+navToArray[currentIndex].name).removeClass("active");
+            $("#"+navToArray[currentIndex-1].name).addClass("active");
             displaySection($(mainToArray[currentIndex-1].id));
             currentIndex--;
             setTimeout(function(){
@@ -59,6 +87,8 @@ $("body").keydown(function(key){
             $(mainToArray[currentIndex].id).fadeOut(500, function(){
                 $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-left");
                 $(mainToArray[currentIndex+1].id).addClass("slide-rotate-ver-right-reverse");
+                $("#"+navToArray[currentIndex].name).removeClass("active");
+                $("#"+navToArray[currentIndex+1].name).addClass("active");
                 displaySection($(mainToArray[currentIndex+1].id));
                 currentIndex++;
                 setTimeout(function(){
@@ -85,6 +115,5 @@ function toast(){
 
 function inIt(){
     $("#index-main-section").css("display", "none");
-    // $(".toast").css("display", "none");
     $("#index-main-section").fadeIn(700);
 };
