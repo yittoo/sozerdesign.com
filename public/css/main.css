@@ -95,6 +95,10 @@ h2 {
 	        animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.general-text p {
+    margin-bottom: 0;
+}
+
 @-webkit-keyframes slide-rotate-hor-top {
     0% {
       -webkit-transform: translateY(0) rotateX(0deg);
@@ -254,6 +258,10 @@ h2 {
     background-color: rgba(233,234,249,0.2);
 }
 
+.font-consolas {
+    font-family: Consolas;
+}
+
 @media screen and (max-width : 768px){
     .general-text  {
       font-size: 0.8rem;
@@ -273,7 +281,7 @@ h2 {
 
 @media screen and (min-height : 800px){
     .toast {
-      margin-top: 5%;
+      margin-top: 1%;
     }
 }
 
