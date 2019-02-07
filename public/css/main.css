@@ -7,9 +7,9 @@ html, body{
 body{
     font-family: Lato;
     font-weight: 400;
-    background-image: url(../image/sky.jpg);
     background-size: cover;
     z-index: -1;
+    transition: background-image 2s;
 }
 
 
@@ -82,7 +82,7 @@ body{
     font-size: 0.9rem;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
+.navbar-dark .navbar-nav .nav-link.active {
     font-weight: 700;
 }
 
@@ -242,23 +242,36 @@ body{
     }
 }
 
-#general-text {
+.general-text {
     font-size: 1.5rem;
-    color: black;
-    text-shadow: rgb(117, 171, 185) 2px 2px 2px;
+    font-family: Varela;
+    color: #f7f1e3;
+    text-shadow: #1e272e 2px 2px 2px;
+    background-color: rgba(233,234,249,0.2);
 }
 
 @media screen and (max-width : 768px){
-    #general-text  {
+    .general-text  {
       font-size: 0.8rem;
     }
 }
 @media screen and (max-width : 992px){
-    #general-text  {
+    .general-text  {
       font-size: 1.2rem;
     }
 }
 
+@media screen and (min-height : 800px){
+    #about-section {
+      margin-top: 5%;
+    }
+}
+
+@media screen and (min-height : 800px){
+    .toast {
+      margin-top: 5%;
+    }
+}
 
 #about-section {
     z-index: 0;

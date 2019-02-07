@@ -28,6 +28,7 @@ $(".btn-home").on("click", function(){
         $("#index-main-section").fadeIn(500, function(){
             $("#index-main-section").removeClass("slide-rotate-hor-top-reverse");
             currentIndex = -1;
+            backgroundSetter();
         });
     });
 });
@@ -48,6 +49,7 @@ $(".main-btn-group").on("click", function(){
         displaySection($("#navbar"));
         displaySection($(hitSection));
         toast();
+        backgroundSetter();
     });
 });
 
@@ -61,6 +63,7 @@ $(".nav-btn-group").on("click", function(){
                 currentIndex = index;
                 displaySection($(hitSection));
                 $("#"+navToArray[currentIndex].name).addClass("active");
+                backgroundSetter();
             });
         }
     });
@@ -78,6 +81,7 @@ $("body").keydown(function(key){
             currentIndex--;
             setTimeout(function(){
                 $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-left-reverse");
+                backgroundSetter();
             }, 500);
         });
     };
@@ -93,10 +97,12 @@ $("body").keydown(function(key){
                 currentIndex++;
                 setTimeout(function(){
                     $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-right-reverse");
+                    backgroundSetter();
                 }, 500);
             });
         }
     }
+    
 });
 
 function displaySection(ele){
@@ -112,8 +118,35 @@ function toast(){
     }, 4000);
 }
 
+function backgroundSetter(){
+    $("body").removeClass("blurOverBackground");
+    switch (currentIndex) {
+        case -1 :
+            $("body").css("background-image", "url(../image/indexBackground.jpg)");
+            break;
+        case 0 :
+            $("body").css("background-image", "url(../image/indexBackground3.jpg)");
+            break;
+        case 1 :
+            $("body").css("background-image", "url(../image/codeBackground.jpg)");
+            break;
+        case 2 :
+            $("body").css("background-image", "url(../image/indexBackground4.jpg)");
+            break;
+        case 3 :
+            $("body").css("background-image", "url(../image/indexBackground5.jpg)");
+            break;
+        case 4 :
+            $("body").css("background-image", "url(../image/indexBackground6.jpg)");
+            break;
+        case 5 :
+            $("body").css("background-image", "url(../image/indexBackground7.jpg)");
+            break;
+    }
+}
 
 function inIt(){
     $("#index-main-section").css("display", "none");
     $("#index-main-section").fadeIn(700);
+    backgroundSetter();
 };
