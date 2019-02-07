@@ -13,6 +13,12 @@ body{
     background-color: rgba(44,44,44,1);
 }
 
+.row h1{
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 2px darkgray;
+}
+
 h2 {
     font-weight: 700;
 }
@@ -21,24 +27,31 @@ h2 {
 
 .bg-tomato-red{
     background-color: #eb2f06;
+    opacity: 0.85;
 }
 .bg-azraq-blue{
     background-color: #4a69bd;
+    opacity: 0.85;
 }
 .bg-aurora-green{
     background-color: #78e08f;
+    opacity: 0.85;
 }
 .bg-squash-blossom{
     background-color: #f6b93b;
+    opacity: 0.85;
 }
 .bg-jalapeno-red{
     background-color: #b71540;
+    opacity: 0.85;
 }
 .bg-spray-blue{
     background-color: #82ccdd;
+    opacity: 0.85;
 }
 .bg-melon-melody{
     background-color: #eb2f06;
+    opacity: 0.85;
 }
 
 
@@ -48,16 +61,16 @@ h2 {
     font-size: 2rem;
 }
 
-.text-index-intro::first-letter{
-    font-size: 3rem;
-}
-
 .py-10{
     padding-top: 6rem!important;
     padding-bottom: 6rem!important;
 }
 
 .nav-link{
+    cursor: pointer;
+}
+
+.pointer{
     cursor: pointer;
 }
 
@@ -90,15 +103,44 @@ h2 {
 .navbar-dark .navbar-nav .nav-link.active {
     font-weight: 700;
 }
+.general-text p {
+    margin-bottom: 0;
+}
+
+.main-btn-group:hover{
+    opacity: 1;
+}
+
+.main-btn-group:hover span {
+    -webkit-animation: mainBtnAnimation 1s linear infinite;
+    animation: mainBtnAnimation 1.2s linear infinite;
+    display: block;
+    max-height: 0%;
+    font-size: 1.3em;
+    transition-duration: 0.5s
+    
+}
+
+@keyframes mainBtnAnimation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-7deg);
+    }
+    75% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(7deg);
+    }
+}
 
 .slide-rotate-hor-top {
 	-webkit-animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.general-text p {
-    margin-bottom: 0;
-}
 
 @-webkit-keyframes slide-rotate-hor-top {
     0% {
