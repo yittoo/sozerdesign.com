@@ -101,8 +101,28 @@ $("body").keydown(function(key){
                 }, 500);
             });
         }
-    }
-    
+    }    
+});
+
+$(document).ready(function(){
+    setTimeout(function(){
+        $("#loader").css("background-image", "url(../image/indexBackground3.jpg)")
+    }, 500);
+    setTimeout(function(){
+        $("#loader").css("background-image", "url(../image/codeBackground.jpg)")
+    }, 1000);
+    setTimeout(function(){
+        $("#loader").css("background-image", "url(../image/indexBackground4.jpg)")
+    }, 1500);
+    setTimeout(function(){
+        $("#loader").css("background-image", "url(../image/indexBackground5.jpg)")
+    }, 2000);
+    setTimeout(function(){
+        $("#loader").css("background-image", "url(../image/indexBackground6.jpg)")
+    }, 2500);
+    setTimeout(function(){
+        $("#loader").css("background-image", "url(../image/indexBackground7.jpg)")
+    }, 3000);
 });
 
 function displaySection(ele){

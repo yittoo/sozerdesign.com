@@ -12,6 +12,10 @@ body{
     transition: background-image 2s;
 }
 
+h2 {
+    font-weight: 700;
+}
+
 
 
 .bg-tomato-red{
