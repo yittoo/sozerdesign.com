@@ -10,6 +10,7 @@ body{
     background-size: cover;
     z-index: -1;
     transition: background-image 2s;
+    background-color: rgba(44,44,44,1);
 }
 
 h2 {
