@@ -112,7 +112,7 @@ h2 {
 }
 
 .main-btn-group:hover span {
-    -webkit-animation: mainBtnAnimation 1s linear infinite;
+    -webkit-animation: mainBtnAnimation 1.2s linear infinite;
     animation: mainBtnAnimation 1.2s linear infinite;
     display: block;
     max-height: 0%;
@@ -127,11 +127,11 @@ h2 {
         transform: rotate(0deg);
     }
     25% {
-        -webkit-transform: rotate(-10deg);
+        -webkit-transform: rotate(-7deg);
         transform: rotate(-7deg);
     }
     75% {
-        -webkit-transform: rotate(10deg);
+        -webkit-transform: rotate(7deg);
         transform: rotate(7deg);
     }
 }

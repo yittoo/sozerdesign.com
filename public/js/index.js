@@ -1,5 +1,5 @@
 
-var currentIndex = -1;
+var currentIndex = 0;
 
 inIt();
 
@@ -21,47 +21,15 @@ var navToArray = [
     {name: "toContactNav", id: "#contact-section"},
 ]
 
-$(".btn-home").on("click", function(){
-    $("#index-parent").children().fadeOut(500);
-    $("#navbar").fadeOut(500, function(){
-        $("#index-main-section").addClass("slide-rotate-hor-top-reverse");
-        $("#index-main-section").fadeIn(500, function(){
-            $("#index-main-section").removeClass("slide-rotate-hor-top-reverse");
-            currentIndex = -1;
-            backgroundSetter();
-        });
-    });
-});
-
-$(".main-btn-group").on("click", function(){
-    var hitSection = this.id;
-    mainToArray.forEach(function(pair, index){
-        $("#"+navToArray[index].name).removeClass("active");
-        if(pair.name===hitSection){
-            hitSection = pair.id;
-            $("#"+navToArray[index].name).addClass("active");
-            currentIndex = index;
-        }
-    });
-    $("#index-main-section").addClass("slide-rotate-hor-top");
-    $("#index-main-section").fadeOut(500, function(){
-        $("#index-main-section").removeClass("slide-rotate-hor-top");
-        displaySection($("#navbar"));
-        displaySection($(hitSection));
-        toast();
-        backgroundSetter();
-    });
-});
-
 $(".nav-btn-group").on("click", function(){
-    var hitSection = this.id;
+    var hitNavBtn = this.id;
     navToArray.forEach(function(pair, index){
         $("#"+navToArray[index].name).removeClass("active");
-        if(pair.name===hitSection){
+        if(pair.name===hitNavBtn){
             $(navToArray[currentIndex].id).fadeOut(500, function(){
-                hitSection = pair.id;
+                hitNavBtn = pair.id;
                 currentIndex = index;
-                displaySection($(hitSection));
+                $(navToArray[index].id).fadeIn(500);
                 $("#"+navToArray[currentIndex].name).addClass("active");
                 backgroundSetter();
             });
@@ -77,7 +45,7 @@ $("body").keydown(function(key){
             $(mainToArray[currentIndex-1].id).addClass("slide-rotate-ver-left-reverse");
             $("#"+navToArray[currentIndex].name).removeClass("active");
             $("#"+navToArray[currentIndex-1].name).addClass("active");
-            displaySection($(mainToArray[currentIndex-1].id));
+            $(mainToArray[currentIndex-1].id).fadeIn(500);
             currentIndex--;
             setTimeout(function(){
                 $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-left-reverse");
@@ -85,22 +53,20 @@ $("body").keydown(function(key){
             }, 500);
         });
     };
-    if(key.which === 39){
-        if(currentIndex<5){
-            $(mainToArray[currentIndex].id).addClass("slide-rotate-ver-left");
-            $(mainToArray[currentIndex].id).fadeOut(500, function(){
-                $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-left");
-                $(mainToArray[currentIndex+1].id).addClass("slide-rotate-ver-right-reverse");
-                $("#"+navToArray[currentIndex].name).removeClass("active");
-                $("#"+navToArray[currentIndex+1].name).addClass("active");
-                displaySection($(mainToArray[currentIndex+1].id));
-                currentIndex++;
-                setTimeout(function(){
-                    $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-right-reverse");
-                    backgroundSetter();
-                }, 500);
-            });
-        }
+    if(key.which === 39 && currentIndex<5){
+        $(mainToArray[currentIndex].id).addClass("slide-rotate-ver-left");
+        $(mainToArray[currentIndex].id).fadeOut(500, function(){
+            $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-left");
+            $(mainToArray[currentIndex+1].id).addClass("slide-rotate-ver-right-reverse");
+            $("#"+navToArray[currentIndex].name).removeClass("active");
+            $("#"+navToArray[currentIndex+1].name).addClass("active");
+            $(mainToArray[currentIndex+1].id).fadeIn(500);
+            currentIndex++;
+            setTimeout(function(){
+                $(mainToArray[currentIndex].id).removeClass("slide-rotate-ver-right-reverse");
+                backgroundSetter();
+            }, 500);
+        });
     }    
 });
 
@@ -125,11 +91,6 @@ $(document).ready(function(){
     }, 3000);
 });
 
-function displaySection(ele){
-    ele.removeClass("d-none");
-    ele.css("display", "none");
-    ele.fadeIn(500);
-};
 
 function toast(){
     $(".toast").fadeTo(700, 1);
@@ -141,9 +102,6 @@ function toast(){
 function backgroundSetter(){
     $("body").removeClass("blurOverBackground");
     switch (currentIndex) {
-        case -1 :
-            $("body").css("background-image", "url(../image/indexBackground.jpg)");
-            break;
         case 0 :
             $("body").css("background-image", "url(../image/indexBackground3.jpg)");
             break;
@@ -166,7 +124,12 @@ function backgroundSetter(){
 }
 
 function inIt(){
-    $("#index-main-section").css("display", "none");
-    $("#index-main-section").fadeIn(700);
+    // $("#index-main-section").css("display", "none");
+    // $("#index-main-section").fadeIn(700);
+    $("#index-parent").children().css("display", "none");
+    $("#navbar").css("display", "none");
+    toast();
+    $("#navbar").fadeIn(700);
+    $("#about-section").fadeIn(700);
     backgroundSetter();
 };
