@@ -96,7 +96,7 @@ function toast(){
     $(".toast").fadeTo(700, 1);
     setTimeout(function(){
         $(".toast").fadeTo(300, 0);
-    }, 4000);
+    }, 8000);
 }
 
 function backgroundSetter(){

@@ -24,37 +24,6 @@ h2 {
 }
 
 
-
-.bg-tomato-red{
-    background-color: #eb2f06;
-    opacity: 0.85;
-}
-.bg-azraq-blue{
-    background-color: #4a69bd;
-    opacity: 0.85;
-}
-.bg-aurora-green{
-    background-color: #78e08f;
-    opacity: 0.85;
-}
-.bg-squash-blossom{
-    background-color: #f6b93b;
-    opacity: 0.85;
-}
-.bg-jalapeno-red{
-    background-color: #b71540;
-    opacity: 0.85;
-}
-.bg-spray-blue{
-    background-color: #82ccdd;
-    opacity: 0.85;
-}
-.bg-melon-melody{
-    background-color: #eb2f06;
-    opacity: 0.85;
-}
-
-
 .text-index-intro{
     color: white;
     font-weight: 700;
@@ -68,6 +37,7 @@ h2 {
 
 .nav-link{
     cursor: pointer;
+    padding-bottom: 0.27rem;
 }
 
 .pointer{
@@ -107,18 +77,38 @@ h2 {
     margin-bottom: 0;
 }
 
-.main-btn-group:hover{
-    opacity: 1;
+.nav-btn-group span{
+    display: none;
 }
 
-.main-btn-group:hover span {
-    -webkit-animation: mainBtnAnimation 1.2s linear infinite;
-    animation: mainBtnAnimation 1.2s linear infinite;
-    display: block;
-    max-height: 0%;
-    font-size: 1.3em;
-    transition-duration: 0.5s
-    
+.nav-btn-group:hover span {
+    display: inline;
+    -webkit-animation: fadein 1s;
+    animation: fadeIn 1s;
+}
+
+.nav-btn-group:hover i {
+    display: none;
+}
+
+.active span, active i {
+    display: inline;
+    -webkit-animation: fadein 1s;
+    animation: fadeIn 1s;
+}
+
+.active:hover i {
+    display: inline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to   { opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from { opacity: 0;}
+    to   { opacity: 1;}
 }
 
 @keyframes mainBtnAnimation {
@@ -305,6 +295,14 @@ h2 {
     font-family: Consolas;
 }
 
+.general-text-no-bg{
+    background-color: rgba(0,0,0,0);
+}
+
+.general-text-thick-bg{
+    background-color: rgba(61, 61, 61,0.6);
+}
+
 @media screen and (max-width : 768px){
     .general-text  {
       font-size: 0.8rem;
@@ -331,10 +329,6 @@ h2 {
 #about-section {
     z-index: 0;
     /* background-color:rgba(56,173,169,0.3); */
-}
-
-#index-main-section{
-    padding-top: 5rem;
 }
 
 #nav-home-btn{
