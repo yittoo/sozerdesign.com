@@ -1,25 +1,5 @@
 <% include ../partials/header %>
 
-
-<!--
-<div id="index-main-section d-none">
-    <div class="d-flex justify-content-center align-items-stretch" id="index-initial">
-        <div class="col-lg-10 col-md-12">
-            <div class="row mb-1 mb-md-4"><h1>Hello, I'm Yigit and I'm a full stack web developer</h1></div>
-            <div class="row">
-                <div class="col-md-4 col-6 px-0 pb-0 py-10 text-center text-index-intro main-btn-group pointer bg-tomato-red toAbout" id="toAbout"><span>About:</span></div>
-                <div class="col-md-4 col-6 px-0 pb-0 py-10 text-center text-index-intro main-btn-group pointer bg-azraq-blue toSkills" id="toSkills"><span>Skills:</span></div>
-                <div class="col-md-4 col-6 px-0 pb-0 py-10 text-center text-index-intro main-btn-group pointer bg-aurora-green toEducation" id="toEducation"><span>Education:</span></div>
-                <div class="col-md-4 col-6 px-0 pb-0 py-10 text-center text-index-intro main-btn-group pointer bg-squash-blossom toPersonal" id="toPersonal"><span>Personal Life:</span></div>
-                <div class="col-md-4 col-6 px-0 pb-0 py-10 text-center text-index-intro main-btn-group pointer bg-jalapeno-red toPortfolio" id="toPortfolio"><span>Previous Work:</span></div>
-                <div class="col-md-4 col-6 px-0 pb-0 py-10 text-center text-index-intro main-btn-group pointer bg-spray-blue toContact" id="toContact"><span>Contact:</span></div>
-            </div>
-        </div>
-    </div>
-</div>
--->
-
-
 <div id="index-parent">
 
 <div id="about-section" class="pt-4">
@@ -108,7 +88,7 @@
     </div>
 </div>
 
-<div id="education-section" class="pt-4" style="display: none;">
+<div id="education-section" class="" style="display: none;">
     <div class="container mt-3">
         <div class="row my-5">
             <div class="col-lg-4 col-md-12 col-12 my-auto">
@@ -156,7 +136,7 @@
     <div class="container">
         <div class="row my-5 py-lg-0 py-3">
             <div class="col-lg-4 col-12 my-auto">
-                <img src="image/lightbulb.jpg" class="img-fluid img-center border border-white">
+                <img src="image/yigitpersonal.jpg" class="img-fluid img-center border border-white">
             </div>
             <div class="col-lg-8 col-12 general-text general-text-thick-bg">
                 <p>
@@ -171,7 +151,7 @@
             <div class="col-12 general-text general-text-thick-bg">
                 <p>
                     <strong>College Years:</strong><br>
-                    I started Işık University, Mechatronics Engineering major in 2013. In my college years I've continued my pursuit for dancing and took part in various shows involving Latin Dances. In my junior year I've started taking part in management of university's dancing team and with my high GPA started minor in Software Engineering.
+                    I started Işık University, Mechatronics Engineering major in 2013. In my college years I've continued my pursuit for dancing and took part in various shows involving Latin Dances. In my junior year I've started taking part in management of university's dancing team and with my high GPA started minor in Software Engineering. As graduation project my team and I made an automated drone capable of detecting forest fires.
                 </p>
                 <p>
                     <br><strong>Young Adult - Now:</strong><br>
@@ -184,29 +164,69 @@
 </div>
 <div id="portfolio-section" class="pt-4" style="display: none;">
     <div class="container">
-        <div class="jumbotron mx-md-5 mx-sm-1">
-            <div class="d-flex flex-row px-lg-5 px-sm-1 justify-content-center align-items-center">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12"><img src="image/aerial-shot.jpg" class="img-fluid img-center"></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 mt-md-0 mt-sm-5 pl-5 align-self-center general-text"><h3>Portfolio</h3> dolor sit amet consectetur adipisicing elit. Accusantium eius laboriosam soluta velit facere delectus recusandae consequatur? Autem nemo aspernatur error dicta, unde, magnam perspiciatis aliquam quia ea, corrupti vero cupiditate? Quibusdam explicabo culpa dignissimos modi voluptatibus fugit facilis neque!</div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="card">
+                    <img class="card-img-top" src="image/valkyrie.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Dungeon Design</h5>
+                        <p class="card-text">Open source dungeon designs for a game called Ragnarok Online.</p>
+                        <a href="#" target="_blank" class="btn btn-primary">WillBeLinkedSoon</a>
+                    </div>
+                </div>
             </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="card">
+                    <img class="card-img-top" src="image/herokulogo.jpg" alt="heroku">
+                    <div class="card-body">
+                        <h5 class="card-title">Yelp Camp</h5>
+                        <p class="card-text">Fully functional web app pilot project I've built during education.</p>
+                        <a href="https://protected-crag-81477.herokuapp.com/" target="_blank" class="btn btn-primary mt-auto">Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="card">
+                    <img class="card-img-top" src="image/donut.jpg" alt="donut">
+                    <div class="card-body">
+                        <h5 class="card-title">Museum of Candy</h5>
+                        <p class="card-text">One page template ready to be theme changed according to necessity.</p>
+                        <a href="#" target="_blank" class="btn btn-primary">WillBeLinkedSoon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="card">
+                    <img class="card-img-top" src="image/patatap.jpg" alt="patatap">
+                    <div class="card-body">
+                        <h5 class="card-title">Patatap Replica</h5>
+                        <p class="card-text">Open source one page keyboard used sound project on canvas.</p>
+                        <a href="#" target="_blank" class="btn btn-primary">WillBeLinkedSoon</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div id="contact-section" class="pt-4" style="display: none;">
     <div class="container">
-        <div class="jumbotron mx-md-5 mx-sm-1">
-            <div class="d-flex flex-row px-lg-5 px-sm-1 justify-content-center align-items-center">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12"><img src="image/aerial-shot.jpg" class="img-fluid img-center"></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 mt-md-0 mt-sm-5 pl-5 align-self-center general-text"><h3>Contact</h3> dolor sit amet consectetur adipisicing elit. Accusantium eius laboriosam soluta velit facere delectus recusandae consequatur? Autem nemo aspernatur error dicta, unde, magnam perspiciatis aliquam quia ea, corrupti vero cupiditate? Quibusdam explicabo culpa dignissimos modi voluptatibus fugit facilis neque!</div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="image/aerial-shot.jpg" class="img-fluid img-center border border-white">
             </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 mt-md-0 mt-sm-5 pl-5 align-self-center general-text">
+                <h2>Contact:</h2> 
+                <p>
+                    To get the project in your head running any means necessary, contact me. I work with start-ups, small-mid tier companies, personal projects. I might just have the mindset you need!
+                </p>
+                <p>
+                    Work mail: sozer.work@gmail.com 
+                    <br>GitHub: <a href="https://github.com/yittoo" target="_blank">NewTab <i class="fas fa-external-link-alt"></i></a>
+                    <br>LinkedIn: <a href="https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/" target="_blank">NewTab <i class="fas fa-external-link-alt"></i></a>
+                </p>
             </div>
         </div>
     </div>
-</div>
-
 </div>
 
 <div class="toast mx-auto" role="alert" aria-live="assertive" aria-atomic="true">

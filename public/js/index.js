@@ -81,13 +81,13 @@ $(document).ready(function(){
         $("#loader").css("background-image", "url(../image/indexBackground4.jpg)")
     }, 1500);
     setTimeout(function(){
-        $("#loader").css("background-image", "url(../image/indexBackground5.jpg)")
+        $("#loader").css("background-image", "url(../image/indexBackground52.jpg)")
     }, 2000);
     setTimeout(function(){
         $("#loader").css("background-image", "url(../image/indexBackground6.jpg)")
     }, 2500);
     setTimeout(function(){
-        $("#loader").css("background-image", "url(../image/indexBackground7.jpg)")
+        $("#loader").css("background-image", "url(../image/indexBackground8.jpg)")
     }, 3000);
 });
 
@@ -112,13 +112,13 @@ function backgroundSetter(){
             $("body").css("background-image", "url(../image/indexBackground4.jpg)");
             break;
         case 3 :
-            $("body").css("background-image", "url(../image/indexBackground5.jpg)");
+            $("body").css("background-image", "url(../image/indexBackground52.jpg)");
             break;
         case 4 :
             $("body").css("background-image", "url(../image/indexBackground6.jpg)");
             break;
         case 5 :
-            $("body").css("background-image", "url(../image/indexBackground7.jpg)");
+            $("body").css("background-image", "url(../image/indexBackground8.jpg)");
             break;
     }
 }
