@@ -26,10 +26,6 @@ app.get("/en/*", function(req, res){
     res.redirect("/en");
 });
 
-app.get("*", function(req, res){
-    res.redirect("/");
-});
-
 app.listen(3000, "127.0.0.1" , function(){
     console.log("webbo is uppo");
 });
