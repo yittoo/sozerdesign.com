@@ -11,11 +11,11 @@ app.get("/", function(req, res){
 });
 
 app.get("/en", function(req, res){
-    res.render("en/index.ejs");
+    res.render("en/index");
 });
 
 app.get("/tr", function(req, res){
-    res.render("tr/index.ejs");
+    res.render("tr/index");
 });
 
 app.get("/tr/*", function(req, res){

@@ -1,5 +1,40 @@
 <% include ../partials/header %>
 
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+  <a class="navbar-brand" href="/">SozerDesign</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link nav-btn-group active" id="toAboutNav"><span>About </span><i class="fas fa-question-circle"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-btn-group" id="toSkillsNav"><span>Skills </span><i class="fas fa-clipboard-check"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-btn-group" id="toEducationNav"><span>Education </span><i class="fas fa-seedling"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-btn-group" id="toPersonalNav"><span>Personal </span><i class="fas fa-running"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-btn-group" id="toPortfolioNav"><span>Portfolio </span><i class="fas fa-server"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-btn-group" id="toContactNav"><span>Contact </span><i class="fas fa-envelope"></i></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/yittoo" target="_blank"><i class="fab fa-git-square"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div id="index-parent">
 
 <div id="about-section" class="pt-4">
@@ -71,7 +106,7 @@
                 <h2><br></h2> 
                 <p>
                     Native<br>
-                    Proficiency<br>
+                    Proficient<br>
                     Intermediate<br>
                     Beginner
                 </p>
@@ -132,6 +167,7 @@
         </div>
     </div>
 </div>
+
 <div id="personal-section" class="pt-4" style="display: none;">
     <div class="container">
         <div class="row my-5 py-lg-0 py-3">
@@ -151,7 +187,7 @@
             <div class="col-12 general-text general-text-thick-bg">
                 <p>
                     <strong>College Years:</strong><br>
-                    I started Işık University, Mechatronics Engineering major in 2013. In my college years I've continued my pursuit for dancing and took part in various shows involving Latin Dances. In my junior year I've started taking part in management of university's dancing team and with my high GPA started minor in Software Engineering. As graduation project my team and I made an automated drone capable of detecting forest fires.
+                    I started Işık University with full scholarship, Mechatronics Engineering major in 2013. In my college years I've continued my pursuit for dancing and took part in various shows involving Latin Dances. In my junior year I've started taking part in management of university's dancing team and with my high GPA started minor in Software Engineering. As graduation project my team and I made an automated drone capable of detecting forest fires.
                 </p>
                 <p>
                     <br><strong>Young Adult - Now:</strong><br>
@@ -162,6 +198,7 @@
         </div>
     </div>
 </div>
+
 <div id="portfolio-section" class="pt-4" style="display: none;">
     <div class="container">
         <div class="row">
@@ -171,7 +208,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Dungeon Design</h5>
                         <p class="card-text">Open source dungeon designs for a game called Ragnarok Online.</p>
-                        <a href="#" target="_blank" class="btn btn-primary">WillBeLinkedSoon</a>
+                        <a href="#" target="_blank" class="btn btn-success">WillBeLinkedSoon</a>
                     </div>
                 </div>
             </div>
@@ -182,6 +219,7 @@
                         <h5 class="card-title">Yelp Camp</h5>
                         <p class="card-text">Fully functional web app pilot project I've built during education.</p>
                         <a href="https://protected-crag-81477.herokuapp.com/" target="_blank" class="btn btn-primary mt-auto">Demo <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/yittoo/yelpCamp" target="_blank" class="btn btn-success">Source <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -191,7 +229,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Museum of Candy</h5>
                         <p class="card-text">One page template ready to be theme changed according to necessity.</p>
-                        <a href="#" target="_blank" class="btn btn-primary">WillBeLinkedSoon</a>
+                        <a href="https://github.com/yittoo/museumOfCandy" target="_blank" class="btn btn-success">Source <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -201,32 +239,35 @@
                     <div class="card-body">
                         <h5 class="card-title">Patatap Replica</h5>
                         <p class="card-text">Open source one page keyboard used sound project on canvas.</p>
-                        <a href="#" target="_blank" class="btn btn-primary">WillBeLinkedSoon</a>
+                        <a href="https://github.com/yittoo/soundsProject" target="_blank" class="btn btn-success">Source <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div id="contact-section" class="pt-4" style="display: none;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <img src="image/aerial-shot.jpg" class="img-fluid img-center border border-white">
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 mt-md-0 mt-sm-5 pl-5 align-self-center general-text">
+            <div class="col-lg-6 col-md-12 col-sm-12 mt-md-0 mt-sm-5 p-5 align-self-center general-text">
                 <h2>Contact:</h2> 
                 <p>
                     To get the project in your head running any means necessary, contact me. I work with start-ups, small-mid tier companies, personal projects. I might just have the mindset you need!
                 </p>
                 <p>
-                    Work mail: sozer.work@gmail.com 
-                    <br>GitHub: <a href="https://github.com/yittoo" target="_blank">NewTab <i class="fas fa-external-link-alt"></i></a>
-                    <br>LinkedIn: <a href="https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/" target="_blank">NewTab <i class="fas fa-external-link-alt"></i></a>
+                    <br>Work mail: sozer.work@gmail.com 
+                    <br><a href="https://github.com/yittoo" target="_blank">GitHub <i class="fas fa-external-link-alt"></i></a>
+                    <br><a href="https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/" target="_blank">LinkedIn <i class="fas fa-external-link-alt"></i></a>
                 </p>
             </div>
         </div>
     </div>
+</div>
+
 </div>
 
 <div class="toast mx-auto" role="alert" aria-live="assertive" aria-atomic="true">

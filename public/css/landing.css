@@ -59,6 +59,32 @@ body {
   animation-delay: 40s; 
 }
 
+.tr-bayrak{
+  background-position: 50% 50%;
+}
+
+.tr-bayrak:hover{
+  background-image: url(../image/trbayrak.jpg);
+  color: rgba(0, 0, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: ease-in-out 0.3s;
+  border-color: white;
+}
+
+.en-bayrak{
+  background-position: 50% 50%;
+}
+
+.en-bayrak:hover{
+  background-image: url(../image/ukbayrak.jpg);
+  color: rgba(0, 0, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: ease-in-out 0.3s;
+  border-color: white;
+}
+
 @keyframes imageAnimation { 
   0% { 
     opacity: 0; 
