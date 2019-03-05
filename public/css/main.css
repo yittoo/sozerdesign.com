@@ -23,6 +23,30 @@ h2 {
     font-weight: 700;
 }
 
+.color-white{
+    color: white;
+}
+
+.bg-dark-gray{
+    background-color: rgba(0,0,0,0.4)
+}
+
+.current-project h2{
+    color: white;
+}
+
+.current-project p{
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.soft-outline{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 .text-index-intro{
     color: white;
@@ -238,7 +262,7 @@ h2 {
 }
 
 .card {
-    background-color: rgba(233,234,249,0.2);
+    background-color: rgba(0,0,0,0.3);
     color: #f7f1e3;
     font-family: Varela;
     height: 400px;
